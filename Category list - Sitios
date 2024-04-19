@@ -1,0 +1,41 @@
+// Recursive function to output categories and their children with indentation
+function display_categories_hierarchy($parent_id, $indent = 0) {
+    // Get the child categories of the current parent
+    $child_categories = get_categories(array(
+        'parent' => $parent_id,
+        'hide_empty' => false,
+    ));
+
+    // Get the post count for the current category
+    $post_count = 0;
+    $category_posts = get_posts(array(
+        'numberposts' => -1,
+        'category' => $parent_id,
+    ));
+    $post_count += count($category_posts);
+
+    // Output the category with indentation and link
+    echo str_repeat('&nbsp;', $indent * 4) . '<a href="' . get_category_link($parent_id) . '">' . get_cat_name($parent_id) . '</a> (' . $post_count . ')' . '<br>';
+
+    // If there are child categories, loop through each one
+    if ($child_categories) {
+        foreach ($child_categories as $category) {
+            // Recursively call this function for the current child category
+            $child_post_count = display_categories_hierarchy($category->term_id, $indent + 1);
+            // Add the post count of the child category to the total count
+            $post_count += $child_post_count;
+        }
+    }
+
+    // Return the total post count for this category and its children
+    return $post_count;
+}
+
+// Get the category object for the "Sitios" category
+$sitios_category = get_category_by_slug('sitios');
+
+// Check if the category exists
+if ($sitios_category) {
+    // Output the "Sitios" category with its post count
+    display_categories_hierarchy($sitios_category->term_id);
+}
