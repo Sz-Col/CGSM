@@ -31,13 +31,15 @@ var DO_EXPORT_STATS  = true;    // Export CSV for last 18 full months
 var DO_EXPORT_PANELS = true;    // Export 12 overlay images for last 12 full months
 
 // ================================ AOI =================================
-var AOI = ee.Geometry.Polygon([[
-  [-74.5921864,10.8397632],
-  [-74.5924010,10.8192778],
-  [-74.5436919,10.8197415],
-  [-74.5434774,10.8399739],
-  [-74.5921864,10.8397632]
-]]);
+var AOI = ee.FeatureCollection('projects/ee-juanrenteria/assets/Poligono_Agua_Pajarales').geometry();
+
+// var AOI = ee.Geometry.Polygon([[
+//   [-74.5921864,10.8397632],
+//   [-74.5924010,10.8192778],
+//   [-74.5436919,10.8197415],
+//   [-74.5434774,10.8399739],
+//   [-74.5921864,10.8397632]
+// ]]);
 // AOI outline for overlays & Map display (yellow, 2 px)
 var AOI_outline_img = ee.Image().byte().paint(AOI, 1, 2).visualize({palette: ['#ffff00']});
 
