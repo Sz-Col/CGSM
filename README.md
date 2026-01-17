@@ -32,14 +32,31 @@ The GEE script performs two main tasks:
 ## Study Area
 
 - **Region:** Complejo Pajarales, Ciénaga Grande de Santa Marta, Colombia  
-- **Approx. surface area:** 1,204 ha  
+- **Approx. surface area:** 6,074 ha  
 - **Coordinates:**
   ```
-  [-74.5921864,10.8397632],
-  [-74.5924010,10.8192778],
-  [-74.5436919,10.8197415],
-  [-74.5434774,10.8399739],
-  [-74.5921864,10.8397632]
+[-74.61411596960272, 10.829045512816178],
+          [-74.61068274206366, 10.816231300319165],
+          [-74.61119772619452, 10.79105479581324],
+          [-74.60879446691717, 10.775540821921297],
+          [-74.58218695348944, 10.772336749407717],
+          [-74.57240225500311, 10.781948864638203],
+          [-74.55660940832342, 10.798685650401252],
+          [-74.5370402527896, 10.815041936973051],
+          [-74.52914358801092, 10.827349939881366],
+          [-74.50768591589178, 10.831396442351124],
+          [-74.48451163000311, 10.836454493545562],
+          [-74.4838249844953, 10.844041410065644],
+          [-74.4944676941174, 10.851459251908537],
+          [-74.50682731325803, 10.85685414159808],
+          [-74.50493903811154, 10.860394485014938],
+          [-74.51266380007444, 10.88045563790864],
+          [-74.5329198425549, 10.884838567318647],
+          [-74.54493613894162, 10.88399570128454],
+          [-74.55420585329709, 10.862754690644051],
+          [-74.5717563781058, 10.851668173729724],
+          [-74.59613229363315, 10.846610379742115],
+          [-74.60385705559604, 10.841721097568819]
   ```
 - **Features:** semi-enclosed aquatic system with seasonal vegetation and fluctuating water levels; includes the stilt village *Nueva Venecia*.
 
@@ -115,7 +132,7 @@ When executed in the **Earth Engine Code Editor**:
 
 If you use this code in research or publications, please cite as:
 
-> Salzwedel, H. (2025). *NDVI-based monitoring of aquatic vegetation in the Complejo Pajarales (Ciénaga Grande de Santa Marta, Colombia)* (Version 1.0.0) [Source code]. GitHub. [https://github.com/SI-CGSM/CGSM_Pajarales_NDVI](https://github.com/SI-CGSM/CGSM_Pajarales_NDVI)  
+> Salzwedel, H., J. C. Mejía-Rentería & J. E. Mancera P. (2026). *NDVI-based monitoring of aquatic vegetation in the Complejo Pajarales (Ciénaga Grande de Santa Marta, Colombia)* (Version 1.0.0) [Source code]. GitHub. [https://github.com/SI-CGSM/CGSM_Pajarales_NDVI](https://github.com/SI-CGSM/CGSM_Pajarales_NDVI)  
 > DOI: *[to be assigned by Zenodo]*  
 
 And cite the supporting platforms:
